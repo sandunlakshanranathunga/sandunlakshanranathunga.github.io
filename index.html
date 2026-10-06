@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandun Lakshan | Business Analytics Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8e8e8;--ink:#1c1c1c;--red:#f0302b;--mute:#a9a9a9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161616;--ink:#ededed;--red:#ff4a44;--mute:#555}}
+:root[data-theme="dark"]{--bg:#161616;--ink:#ededed;--red:#ff4a44;--mute:#555}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:500 1rem/1.6 Montserrat,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.wrap{padding-inline:4vw}
+header{display:flex;justify-content:space-between;align-items:center;padding-block:1.6rem;font-weight:700}
+nav{display:flex;gap:2rem}
+nav a,.mail,.links a{background:linear-gradient(var(--red),var(--red)) 0 100%/0 3px no-repeat;transition:background-size .4s}
+nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
+
+.hero{min-height:100svh;display:flex;flex-direction:column}
+.stage{position:relative;flex:1;display:grid;place-items:center;padding-block:2rem}
+.hero-title{font-weight:800;font-size:min(18.5vw,26rem);letter-spacing:-.065em;line-height:.85;white-space:nowrap;padding-right:.065em}
+.l{display:inline-block;opacity:0;transform:translateY(.4em) rotate(5deg);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.script{position:absolute;left:50%;top:52%;font-family:"Mrs Saint Delafield","Snell Roundhand","Brush Script MT",cursive;color:var(--red);font-size:min(10vw,9.5rem);line-height:1;white-space:nowrap;pointer-events:none;
+ transform:translate(-50%,-50%) translate(calc(var(--px,0)*34px),calc(var(--py,0)*22px)) rotate(-7deg);transition:transform .35s ease-out;
+ clip-path:inset(-30% 100% -30% 0);animation:write 1.9s 1.1s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes write{to{clip-path:inset(-30% -10% -30% -10%)}}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:2rem;font-size:.85rem;text-align:center}
+.foot a:hover{color:var(--red)}
+
+.about{padding:16vh 4vw}
+.about p{font-weight:800;font-size:clamp(1.8rem,4.6vw,4.2rem);line-height:1.12;letter-spacing:-.03em;max-width:22em}
+.about .w{color:var(--mute);transition:color .35s}
+.about .w.on{color:var(--ink)}
+
+.marquee{overflow:hidden;border-block:2px solid var(--ink);padding-block:1.1rem}
+.track{display:flex;width:max-content;animation:slide 32s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track span{font-weight:800;font-size:clamp(2rem,6vw,5rem);letter-spacing:-.04em;white-space:nowrap;line-height:1.1}
+.track i{display:inline-block;width:.32em;height:.32em;border-radius:50%;background:var(--red);margin-inline:1.6rem;vertical-align:middle}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+h2{font-weight:800;font-size:clamp(2.4rem,7vw,6rem);letter-spacing:-.045em;line-height:1}
+.work{padding-top:16vh}
+.work h2{padding:0 4vw 3rem}
+.row{position:relative;display:grid;grid-template-columns:1.3fr 1fr auto;gap:2rem;align-items:center;padding:2.2rem 4vw;border-top:2px solid var(--ink);overflow:hidden;isolation:isolate;transition:color .4s}
+.row:last-child{border-bottom:2px solid var(--ink)}
+.row::before{content:"";position:absolute;inset:0;background:var(--ink);transform:scaleY(0);transform-origin:bottom;transition:transform .55s cubic-bezier(.7,0,.2,1);z-index:-1}
+a.row:hover::before,a.row:focus-visible::before{transform:scaleY(1)}
+a.row:hover,a.row:focus-visible{color:var(--bg)}
+.row h3{font-weight:800;font-size:clamp(1.6rem,3.6vw,3.2rem);line-height:1.05;letter-spacing:-.03em}
+.tags{display:block;margin-top:.6rem;font-weight:700;font-size:.9rem;color:var(--red)}
+.row p{max-width:34em}
+.go{font-weight:700;white-space:nowrap}
+a.row .go::after{content:" \2192";display:inline-block;transition:transform .4s}
+a.row:hover .go::after{transform:translateX(.5rem)}
+
+.contact{padding:16vh 4vw 6vh}
+.mail{display:inline-block;margin-top:2rem;font-weight:800;font-size:clamp(1.1rem,4.2vw,3.6rem);letter-spacing:-.03em;overflow-wrap:anywhere;padding-bottom:.2rem}
+.links{display:flex;gap:2rem;margin-top:2rem;font-weight:700}
+footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+.dot{position:fixed;top:0;left:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--red);pointer-events:none;z-index:9;opacity:0;transition:width .3s,height .3s,margin .3s,opacity .3s}
+.dot.on{opacity:1}
+.dot.big{width:68px;height:68px;margin:-34px 0 0 -34px;opacity:.9}
+@media (hover:none),(pointer:coarse){.dot{display:none}}
+
+@media (max-width:760px){
+ .foot{grid-template-columns:1fr 1fr}
+ .row{grid-template-columns:1fr;gap:1rem}
+ nav{gap:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .l{opacity:1;transform:none}
+ .script{clip-path:none}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+ <header class="wrap">
+  <strong>Business Analytics</strong>
+  <nav aria-label="Main"><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+ </header>
+ <div class="stage" id="stage">
+  <h1 class="hero-title" aria-label="Portfolio of Sandun Lakshan">portfolio</h1>
+  <p class="script" aria-hidden="true">Sandun Lakshan</p>
+ </div>
+ <div class="foot wrap">
+  <a href="https://github.com/sandunlakshanranathunga">@sandunlakshanranathunga</a>
+  <a href="https://www.linkedin.com/in/sandun-lakshan-3b70ba339">LinkedIn</a>
+  <a href="mailto:sandunlakshaneducation@gmail.com">sandunlakshaneducation@gmail.com</a>
+  <span>Looking for analyst internships</span>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <p id="statement">I'm a business analytics undergraduate who turns messy data into clear answers, using Python, R and Power BI.</p>
+</section>
+
+<div class="marquee" aria-label="Skills">
+ <div class="track" id="track">
+  <span>Python<i></i></span><span>pandas<i></i></span><span>NumPy<i></i></span><span>matplotlib<i></i></span><span>seaborn<i></i></span><span>R<i></i></span><span>Power BI<i></i></span><span>Jupyter<i></i></span><span>Git and GitHub<i></i></span><span>Data cleaning<i></i></span><span>EDA<i></i></span><span>Regression<i></i></span>
+ </div>
+</div>
+
+<section class="work" id="work">
+ <h2>Selected work</h2>
+ <a class="row" href="https://github.com/sandunlakshanranathunga/retail-outlet-performance-analysis">
+  <div><h3>Retail Outlet Performance Analysis</h3><span class="tags">Python, R, group project</span></div>
+  <p>Cleaned a messy retail dataset, explored what drives outlet performance, and showed that marketing spend explains about 82% of the variation in revenue.</p>
+  <span class="go">View repo</span>
+ </a>
+ <a class="row" href="https://github.com/sandunlakshanranathunga/sales-dashboard-powerbi">
+  <div><h3>Sales Performance Dashboard</h3><span class="tags">Power BI</span></div>
+  <p>A four-page interactive report on sales, profit and costs by branch, product category and loyalty tier.</p>
+  <span class="go">View repo</span>
+ </a>
+ <div class="row">
+  <div><h3>What Makes an Anime Highly Rated?</h3><span class="tags">Python, in progress</span></div>
+  <p>An analysis of MyAnimeList data to find what separates highly rated anime from the rest.</p>
+  <span class="go">Coming soon</span>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <h2>Let's work together.</h2>
+ <a class="mail" href="mailto:sandunlakshaneducation@gmail.com">sandunlakshaneducation@gmail.com</a>
+ <div class="links"><a href="https://github.com/sandunlakshanranathunga">GitHub</a><a href="https://www.linkedin.com/in/sandun-lakshan-3b70ba339">LinkedIn</a></div>
+</section>
+<footer><span>&copy; 2026 Sandun Lakshan</span><span>Business Analytics undergraduate</span></footer>
+<div class="dot" id="dot"></div>
+
+<script>
+(function(){
+ var $=function(s){return document.querySelector(s)};
+ var title=$('.hero-title');
+ title.innerHTML=Array.from('portfolio').map(function(c,i){return '<span class="l" aria-hidden="true" style="animation-delay:'+(0.15+i*0.07)+'s">'+c+'</span>'}).join('');
+
+ var track=$('#track');
+ track.insertAdjacentHTML('beforeend',track.innerHTML.replace(/<span>/g,'<span aria-hidden="true">'));
+
+ var st=$('#statement');
+ st.innerHTML=st.textContent.split(' ').map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');
+ var words=st.querySelectorAll('.w');
+ function fill(){
+  var r=st.getBoundingClientRect(),h=innerHeight;
+  var p=Math.min(1,Math.max(0,(h*0.85-r.top)/(r.height+h*0.35)));
+  var n=Math.round(p*words.length);
+  words.forEach(function(w,i){w.classList.toggle('on',i<n)});
+ }
+ addEventListener('scroll',fill,{passive:true});addEventListener('resize',fill);fill();
+
+ var stage=$('#stage');
+ addEventListener('pointermove',function(e){
+  stage.style.setProperty('--px',(e.clientX/innerWidth-0.5).toFixed(3));
+  stage.style.setProperty('--py',(e.clientY/innerHeight-0.5).toFixed(3));
+ },{passive:true});
+
+ var dot=$('#dot'),x=0,y=0,tx=0,ty=0;
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;dot.classList.add('on');dot.classList.toggle('big',!!e.target.closest('a'))});
+  document.addEventListener('pointerleave',function(){dot.classList.remove('on')});
+  (function loop(){x+=(tx-x)*0.18;y+=(ty-y)*0.18;dot.style.transform='translate('+x+'px,'+y+'px)';requestAnimationFrame(loop)})();
+ }
+})();
+</script>
+</body>
+</html>
