@@ -36,10 +36,14 @@ nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
 .foot{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:2rem;font-size:.85rem;text-align:center}
 .foot a:hover{color:var(--red)}
 
-.about{padding:16vh 4vw}
+.about{padding:16vh 4vw;display:grid;grid-template-columns:1fr minmax(220px,26vw);gap:4vw;align-items:center}
+.about.nophoto{display:block}
 .about p{font-weight:800;font-size:clamp(1.8rem,4.6vw,4.2rem);line-height:1.12;letter-spacing:-.03em;max-width:22em}
 .about .w{color:var(--mute);transition:color .35s}
 .about .w.on{color:var(--ink)}
+.photo{width:100%;max-width:380px;justify-self:end}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border:2px solid var(--ink);border-radius:6px;filter:grayscale(1);transform:rotate(2deg);transition:filter .5s,transform .5s}
+.photo:hover img{filter:none;transform:rotate(0)}
 
 .marquee{overflow:hidden;border-block:2px solid var(--ink);padding-block:1.1rem}
 .track{display:flex;width:max-content;animation:slide 32s linear infinite}
@@ -77,6 +81,8 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
  .foot{grid-template-columns:1fr 1fr}
  .row{grid-template-columns:1fr;gap:1rem}
  nav{gap:1.2rem}
+ .about{grid-template-columns:1fr;gap:3rem}
+ .photo{justify-self:start;max-width:280px}
 }
 @media (prefers-reduced-motion:reduce){
  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -105,6 +111,9 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
 
 <section class="about" id="about">
  <p id="statement">I’m a Business Analytics undergraduate curious about the patterns behind everyday decisions, using data to explore questions and understand what often goes unnoticed, using Python, R, Power BI and Tableau.</p>
+ <figure class="photo">
+  <img src="photo.jpg" alt="Photo of Sandun Lakshan" width="800" height="1000" loading="lazy" onerror="this.closest('.about').classList.add('nophoto');this.closest('.photo').remove()">
+ </figure>
 </section>
 
 <div class="marquee" aria-label="Skills">
@@ -128,6 +137,11 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
  <a class="row" href="https://github.com/sandunlakshanranathunga/airline-performance-satisfaction-tableau">
   <div><h3>Airline Performance &amp; Customer Satisfaction</h3><span class="tags">Tableau, group project</span></div>
   <p>An interactive dashboard on how flight delays and cancellations relate to passenger satisfaction across 12 airlines, built from 1,405 flights and 715 survey responses.</p>
+  <span class="go">View repo</span>
+ </a>
+ <a class="row" href="https://github.com/sandunlakshanranathunga?tab=repositories">
+  <div><h3>FreshMart Business Intelligence Dashboard</h3><span class="tags">HTML, CSS, JavaScript, Chart.js</span></div>
+  <p>A web dashboard rebuilt from my Power BI report, covering sales, profit and cost. It shows that Rice &amp; Grains has the highest sales but the lowest margin, at about 9%.</p>
   <span class="go">View repo</span>
  </a>
  <div class="row">
