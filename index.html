@@ -23,7 +23,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding-blo
 nav{display:flex;gap:2rem}
 nav a,.mail,.links a{background:linear-gradient(var(--red),var(--red)) 0 100%/0 3px no-repeat;transition:background-size .4s}
 nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
- 
+
 .hero{min-height:100svh;display:flex;flex-direction:column}
 .stage{position:relative;flex:1;display:grid;place-items:center;padding-block:2rem}
 .hero-title{font-weight:800;font-size:min(18.5vw,26rem);letter-spacing:-.065em;line-height:.85;white-space:nowrap;padding-right:.065em}
@@ -35,7 +35,7 @@ nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
 @keyframes write{to{clip-path:inset(-30% -10% -30% -10%)}}
 .foot{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-block:2rem;font-size:.85rem;text-align:center}
 .foot a:hover{color:var(--red)}
- 
+
 .about{padding:16vh 4vw;display:grid;grid-template-columns:1fr minmax(220px,26vw);gap:4vw;align-items:center}
 .about.nophoto{display:block}
 .about p{font-weight:800;font-size:clamp(1.8rem,4.6vw,4.2rem);line-height:1.12;letter-spacing:-.03em;max-width:22em}
@@ -44,14 +44,14 @@ nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
 .photo{width:100%;max-width:380px;justify-self:end}
 .photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border:2px solid var(--ink);border-radius:6px;filter:grayscale(1);transform:rotate(2deg);transition:filter .5s,transform .5s}
 .photo:hover img{filter:none;transform:rotate(0)}
- 
+
 .marquee{overflow:hidden;border-block:2px solid var(--ink);padding-block:1.1rem}
 .track{display:flex;width:max-content;animation:slide 32s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 .track span{font-weight:800;font-size:clamp(2rem,6vw,5rem);letter-spacing:-.04em;white-space:nowrap;line-height:1.1}
 .track i{display:inline-block;width:.32em;height:.32em;border-radius:50%;background:var(--red);margin-inline:1.6rem;vertical-align:middle}
 @keyframes slide{to{transform:translateX(-50%)}}
- 
+
 h2{font-weight:800;font-size:clamp(2.4rem,7vw,6rem);letter-spacing:-.045em;line-height:1}
 .work{padding-top:16vh}
 .work h2{padding:0 4vw 3rem}
@@ -66,17 +66,17 @@ a.row:hover,a.row:focus-visible{color:var(--bg)}
 .go{font-weight:700;white-space:nowrap}
 a.row .go::after{content:" \2192";display:inline-block;transition:transform .4s}
 a.row:hover .go::after{transform:translateX(.5rem)}
- 
+
 .contact{padding:16vh 4vw 6vh}
 .mail{display:inline-block;margin-top:2rem;font-weight:800;font-size:clamp(1.1rem,4.2vw,3.6rem);letter-spacing:-.03em;overflow-wrap:anywhere;padding-bottom:.2rem}
 .links{display:flex;gap:2rem;margin-top:2rem;font-weight:700}
 footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
- 
+
 .dot{position:fixed;top:0;left:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--red);pointer-events:none;z-index:9;opacity:0;transition:width .3s,height .3s,margin .3s,opacity .3s}
 .dot.on{opacity:1}
 .dot.big{width:68px;height:68px;margin:-34px 0 0 -34px;opacity:.9}
 @media (hover:none),(pointer:coarse){.dot{display:none}}
- 
+
 @media (max-width:760px){
  .foot{grid-template-columns:1fr 1fr}
  .row{grid-template-columns:1fr;gap:1rem}
@@ -108,20 +108,20 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
   <span>Looking for analyst internships</span>
  </div>
 </section>
- 
+
 <section class="about" id="about">
  <p id="statement">I’m a Business Analytics undergraduate curious about the patterns behind everyday decisions, using data to explore questions and understand what often goes unnoticed, using Python, R, Power BI and Tableau.</p>
  <figure class="photo">
   <img src="photo.jpg" alt="Photo of Sandun Lakshan" width="800" height="1000" loading="lazy" onerror="this.closest('.about').classList.add('nophoto');this.closest('.photo').remove()">
  </figure>
 </section>
- 
+
 <div class="marquee" aria-label="Skills">
  <div class="track" id="track">
   <span>Python<i></i></span><span>pandas<i></i></span><span>NumPy<i></i></span><span>matplotlib<i></i></span><span>seaborn<i></i></span><span>R<i></i></span><span>Power BI<i></i></span><span>Tableau<i></i></span><span>Jupyter<i></i></span><span>Git and GitHub<i></i></span><span>Data cleaning<i></i></span><span>EDA<i></i></span><span>Regression<i></i></span>
  </div>
 </div>
- 
+
 <section class="work" id="work">
  <h2>Selected work</h2>
  <a class="row" href="https://github.com/sandunlakshanranathunga/retail-outlet-performance-analysis">
@@ -139,9 +139,9 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
   <p>An interactive dashboard on how flight delays and cancellations relate to passenger satisfaction across 12 airlines, built from 1,405 flights and 715 survey responses.</p>
   <span class="go">View repo</span>
  </a>
- <a class="row" href="https://github.com/sandunlakshanranathunga?tab=repositories">
-  <div><h3>FreshMart Business Intelligence Dashboard</h3><span class="tags">HTML, CSS, JavaScript, Chart.js</span></div>
-  <p>A web dashboard rebuilt from my Power BI report, covering sales, profit and cost. It shows that Rice &amp; Grains has the highest sales but the lowest margin, at about 9%.</p>
+ <a class="row" href="https://github.com/sandunlakshanranathunga/freshmart-powerbi-dashboard">
+  <div><h3>FreshMart Sales Dashboard</h3><span class="tags">Power BI</span></div>
+  <p>An interactive Power BI dashboard that analyses sales, profit and cost for FreshMart, a supermarket chain with 8 branches in Sri Lanka.</p>
   <span class="go">View repo</span>
  </a>
  <div class="row">
@@ -150,7 +150,7 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
   <span class="go">Coming soon</span>
  </div>
 </section>
- 
+
 <section class="contact" id="contact">
  <h2>Let's work together.</h2>
  <a class="mail" href="mailto:sandunlakshaneducation@gmail.com">sandunlakshaneducation@gmail.com</a>
@@ -158,16 +158,16 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
 </section>
 <footer><span>&copy; 2026 Sandun Lakshan</span><span>Business Analytics undergraduate</span></footer>
 <div class="dot" id="dot"></div>
- 
+
 <script>
 (function(){
  var $=function(s){return document.querySelector(s)};
  var title=$('.hero-title');
  title.innerHTML=Array.from('portfolio').map(function(c,i){return '<span class="l" aria-hidden="true" style="animation-delay:'+(0.15+i*0.07)+'s">'+c+'</span>'}).join('');
- 
+
  var track=$('#track');
  track.insertAdjacentHTML('beforeend',track.innerHTML.replace(/<span>/g,'<span aria-hidden="true">'));
- 
+
  var st=$('#statement');
  st.innerHTML=st.textContent.split(' ').map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');
  var words=st.querySelectorAll('.w');
@@ -178,13 +178,13 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
   words.forEach(function(w,i){w.classList.toggle('on',i<n)});
  }
  addEventListener('scroll',fill,{passive:true});addEventListener('resize',fill);fill();
- 
+
  var stage=$('#stage');
  addEventListener('pointermove',function(e){
   stage.style.setProperty('--px',(e.clientX/innerWidth-0.5).toFixed(3));
   stage.style.setProperty('--py',(e.clientY/innerHeight-0.5).toFixed(3));
  },{passive:true});
- 
+
  var dot=$('#dot'),x=0,y=0,tx=0,ty=0;
  if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
   addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;dot.classList.add('on');dot.classList.toggle('big',!!e.target.closest('a'))});
@@ -195,8 +195,3 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
 </script>
 </body>
 </html>
- 
-
-
-
-Claude finished the response
