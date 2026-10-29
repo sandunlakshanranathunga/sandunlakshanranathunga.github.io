@@ -41,8 +41,6 @@ nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
 .about .w{color:var(--mute);transition:color .35s}
 .about .w.on{color:var(--ink)}
 
-.photo{width:100%;max-width:400px;justify-self:end;align-self:center;margin-right:2vw}
-.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;}
 
 .marquee{overflow:hidden;border-block:2px solid var(--ink);padding-block:1.1rem}
 .track{display:flex;width:max-content;animation:slide 32s linear infinite}
@@ -66,10 +64,9 @@ a.row:hover,a.row:focus-visible{color:var(--bg)}
 a.row .go::after{content:" \2192";display:inline-block;transition:transform .4s}
 a.row:hover .go::after{transform:translateX(.5rem)}
 
-.contact{padding:16vh 4vw 6vh;display:grid;grid-template-columns:1fr minmax(200px,24vw);gap:4vw;align-items:center}
-.contact.nophoto{display:block}
+.contact{padding:16vh 4vw 6vh}
 .contact-text{min-width:0}
-.mail{display:inline-block;margin-top:2rem;font-weight:800;font-size:clamp(1rem,2.8vw,2.6rem);letter-spacing:-.03em;overflow-wrap:anywhere;padding-bottom:.2rem}
+.mail{display:inline-block;margin-top:2rem;font-weight:800;font-size:clamp(1.1rem,4.2vw,3.6rem);letter-spacing:-.03em;overflow-wrap:anywhere;padding-bottom:.2rem}
 .links{display:flex;gap:2rem;margin-top:2rem;font-weight:700}
 footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 
@@ -82,9 +79,6 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
  .foot{grid-template-columns:1fr 1fr}
  .row{grid-template-columns:1fr;gap:1rem}
  nav{gap:1.2rem}
- .contact{grid-template-columns:1fr;gap:3rem}
- .mail{font-size:clamp(1.1rem,4.2vw,2rem)}
- .photo{justify-self:start;max-width:280px}
 }
 @media (prefers-reduced-motion:reduce){
  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -156,9 +150,6 @@ footer{padding:2rem 4vw;font-size:.85rem;display:flex;justify-content:space-betw
   <a class="mail" href="mailto:sandunlakshaneducation@gmail.com">sandunlakshaneducation@gmail.com</a>
   <div class="links"><a href="https://github.com/sandunlakshanranathunga">GitHub</a><a href="https://www.linkedin.com/in/sandun-lakshan-3b70ba339/">LinkedIn</a></div>
  </div>
- <figure class="photo">
-  <img src="photo.png" alt="Photo of Sandun Lakshan" width="800" height="1000" loading="lazy" onerror="this.closest('.contact').classList.add('nophoto');this.closest('.photo').remove()">
- </figure>
 </section>
 <footer><span>&copy; 2026 Sandun Lakshan</span><span>Business Analytics undergraduate</span></footer>
 <div class="dot" id="dot"></div>
