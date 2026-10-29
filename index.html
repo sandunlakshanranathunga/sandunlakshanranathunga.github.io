@@ -41,9 +41,9 @@ nav a:hover,.mail:hover,.links a:hover{background-size:100% 3px}
 .about .w{color:var(--mute);transition:color .35s}
 .about .w.on{color:var(--ink)}
 
-.photo{width:100%;max-width:380px;justify-self:end}
-.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border:2px solid var(--ink);border-radius:6px;filter:grayscale(1);transform:rotate(2deg);transition:filter .5s,transform .5s}
-.photo:hover img{filter:none;transform:rotate(0)}
+.photo{width:100%;max-width:400px;justify-self:end;align-self:center;margin-right:2vw}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:6px;background:#000}
+@media (prefers-color-scheme:dark){.photo img{background:transparent;mix-blend-mode:lighten}}
 
 .marquee{overflow:hidden;border-block:2px solid var(--ink);padding-block:1.1rem}
 .track{display:flex;width:max-content;animation:slide 32s linear infinite}
